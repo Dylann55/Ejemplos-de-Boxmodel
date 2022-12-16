@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos de BOM Y DOM</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Knewave&family=Oswald:wght@200&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="Actividad2.css">
+
+    <script type="text/javascript">
+
+        /**Funcion de Suma con JavaScript a la cual el resultado se le va a asignar a la id suma**/
+        function Suma(num1, num2, color) {
+            document.bgColor = color
+
+            var resultado;
+            resultado = num1 + num2;
+            document.getElementById("suma").innerHTML = resultado;
+        }
+        /** Funcion de Resta con JavaScript a la cual el resultado se le va a asignar a la id resta **/
+        function Resta(num1, num2, color) {
+            document.bgColor = color
+
+            var resultado;
+            resultado = num1 - num2;
+            document.getElementById("resta").innerHTML = resultado;
+        }
+        /** Funcion de Multiplicacion con JavaScript a la cual el resultado se le va a asignar a la id multiplicacion**/
+        function Multiplicacion(num1, num2, color) {
+            document.bgColor = color
+
+            var resultado;
+            resultado = num1 * num2;
+            document.getElementById("multiplicacion").innerHTML = resultado;
+        }
+         /**Funcion de Division con JavaScript a la cual el resultado se le va a asignar a la id division **/
+        function Division(num1, num2, color) {
+            document.bgColor = color
+
+            var resultado;
+            resultado = num1 / num2;
+            document.getElementById("division").innerHTML = resultado;
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="padding_clasic">
+            <div class="Titulo">
+                <h1>Ejemplo de BOM Y DOM</h1>
+            </div>
+            <nav>
+                <a href="Actividad1.html" class="enlace">Ejemplo de Box-Model</a>
+            </nav>
+    </header>
+
+    <div class="Contenedor Propiedad padding_clasic">
+        <main class="margin_clasic padding_clasic">
+            <h2>Ejemplos</h2>
+
+            <article class="margin_clasic">
+                <h3>1. BOM</h3>
+                
+                <div class="margin_clasic padding_clasic">
+                    <h4>Objeto Location</h4>
+                    <div class="padding_clasic">
+                        <p>Muestra Url de la pagina</p>
+                        <div class="Entrada2 padding_Box">
+                            <!--Este objeto devuelve la URL de la pagina actual-->
+                            <script type="text/javascript">
+                                document.write("<p>La URL de la pagina es: " + window.location);
+                            </script>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="margin_clasic padding_clasic">
+                    <h4>Objeto Navigator</h4>
+                    <div class="padding_clasic">
+                        <p>Muestra Nombre del navegador y sistema operativo</p>
+                        <div class="Entrada2 padding_Box">
+                            <!--Este objeto devuelve el nombre del navegador-->
+                            <script type="text/javascript">
+                                document.write("<p>Estás usando el navegador: " + navigator.appName);
+                            </script>
+                            <!--ste objeto devuelve el Sistema Operativo en el cual el navegador ha sido compilador-->
+                            <script type="text/javascript">
+                                document.write("<p>Estás usando el SO: " + navigator.platform);
+                            </script>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="margin_clasic padding_clasic">
+                    <h4>Objeto Screen</h4>
+                    <div class="padding_clasic">
+                        <p>Muestra Resolucion de Pantalla, Alto X Ancho</p>
+                        <div class="Entrada2 padding_Box">
+                            <!-- Estos objetos devuelven el Ancho y la Altura de la pantalla-->
+                            <script>
+                                document.write("<p>La resolución de tu pantalla es: " + screen.height + " x " + screen.width) 
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="margin_clasic">
+                <h3>2. DOM</h3>
+
+                <div class="margin_clasic padding_clasic">
+                    <h4>Sumar</h4>
+                    <div class="padding_clasic">
+                        <div class="Entrada2 padding_Box">
+                            <p>La suma de 10 y 20 es:</p>
+                            <p id="suma"></p>
+                        </div>
+                        <input type=button value="Sumar" class="Boton" onClick="Suma(10,20, '#97E6FF')">
+                    </div>
+                </div>
+
+                <div class="margin_clasic padding_clasic">
+                    <h4>Restar</h4>
+                    <div class="padding_clasic">
+                        <div class="Entrada2 padding_Box">
+                            <p>La resta de 20 y 5 es: </p>
+                            <p id="resta"></p>
+                        </div>
+                        <input type=button value="Restar" class="Boton" onClick="Resta(20,5, '#4CAEFF')">
+                    </div>
+                </div>
+
+                <div class="margin_clasic padding_clasic">
+                    <h4>Multiplicar</h4>
+                    <div class="padding_clasic">
+                        <div class="Entrada2 padding_Box">
+                            </script>
+                            <p>La multiplicacion entre 10 y 5 es: </p>
+                            <p id="multiplicacion"></p>
+                        </div>
+                        <input type=button value="Multiplicar" class="Boton" onClick="Multiplicacion(10,5, '#1E73FF')">
+                    </div>
+                </div>
+
+                <div class="margin_clasic padding_clasic">
+                    <h4>Dividir</h4>
+                    <div class="padding_clasic">
+                        <div class="Entrada2 padding_Box">
+                            <p>La division entre 20 y 4 es: </p>
+                            <p id="division"></p>
+                        </div>
+                        <input type=button value="Dividir" class="Boton" onClick="Division(20,4, '#5B85FF')">
+                    </div>
+                </div>
+
+            </article>
+        </main>
+    </div>
+
+    <footer>
+        <div class="Titulo">
+            <h1>Ejemplo de Box-Model</h1>
+        </div>
+        <nav>
+            <a href="Actividad1.html" class="enlace">Ejemplo de Box-Model</a>
+        </nav>
+    </footer>
+
+</body>
+
+</html>

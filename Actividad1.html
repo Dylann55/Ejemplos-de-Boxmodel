@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos de Box-Model</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Knewave&family=Oswald:wght@200&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="Actividad1.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="padding_clasic">
+            <div class="Titulo">
+                <h1>Ejemplo de Box-Model</h1>
+            </div>
+            <nav>
+                <a href="Actividad2.html" class="enlace">Ejemplo de BOM Y DOM</a>
+            </nav>
+    </header>
+
+    <div class="Contenedor Propiedad padding_clasic">
+        <main class="margin_clasic padding_clasic">
+            <h2>Ejemplos</h2>
+
+            <article class="margin_clasic">
+                <h3>1. Modificaciones de Box-Model</h3>
+
+                <div class="margin_clasic padding_clasic">
+                    <h4>Margin y Padding</h4>
+                    <div class="padding_clasic">
+                        <h5>1 Valor</h5>
+
+                        <!--La Clase Entrada2 en estos casos ocupara la propiedad inline-block de la Clase .Inline-Block para
+                            que Entrada2 se ajuste automaticamente al espacio ocupado por la Clase .Box -->
+
+                        <p>Con 1 Valor los margin y padding: top/right/bottom/left son todos de 15px</p>
+                        <div class="Entrada2 Inline-Block">
+                            <div class="Box Valor1">Box-Model</div>
+                        </div>
+                        <h5>2 Valor</h5>
+                        <p>Con 2 Valores los margin y padding: top/bottom y left/right son 15px y 0px respectivamente
+                        </p>
+                        <div class="Entrada2 Inline-Block">
+                            <div class="Box Valor2">Box-Model</div>
+                        </div>
+                        <h5>3 Valor</h5>
+                        <p>Con 3 Valores los margin y padding: top, left/right y bottom son 15px, 0px y 10px
+                            respectivamente</p>
+                        <div class="Entrada2 Inline-Block">
+                            <div class="Box Valor3">Box-Model</div>
+                        </div>
+                        <h5>4 Valor</h5>
+                        <p>Con 4 Valores los margin y padding: top, left, bottom,right y son 15px, 10px, 5px, 0px
+                            respectivamente</p>
+                        <div class="Entrada2 Inline-Block">
+                            <div class="Box Valor4">Box-Model</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="margin_clasic padding_clasic">
+                    <h4>Border</h4>
+                    <div class="padding_clasic">
+                        <p>Los width,style y color de top,bottom,right y left son
+                            <strong>4px/dashed/black</strong>,
+                            <strong>5px/double/brown</strong>,
+                            <strong>3px/solid/blueviolet</strong> y
+                            <strong>6px/groove/darkorange</strong> respectivamente
+                        </p>
+                        <div class="Entrada2 padding_Box">
+                            <div class="Box Border">Box-Model</div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="margin_clasic">
+                <h3>2. Box-sizing</h3>
+
+                <div class="margin_clasic padding_clasic">
+                    <h4>Content-Box</h4>
+                    <div class="padding_clasic">
+                        <p>Tenemos que las dimensiones de la caja son 100x40 entonces al usar Content-Box el contenido va a tener estas dimensiones aparte de los 5px del padding y del borde</p>
+                        <div class="Entrada2 padding_Box">
+                            <div class="Box Content-Box">Box-Model</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="margin_clasic padding_clasic">
+                    <h4>Border-Box</h4>
+                    <div class="padding_clasic">
+                        <p>Al usar Border-Box las dimensiones del contenido van a cambiar , pasaran a ser 80x20 para asi completar los 100x40 con los 5px del padding y del borde</p>
+                        <div class="Entrada2 padding_Box">
+                            <div class="Box Border-Box">Box-Model</div>
+                        </div>
+                    </div>
+                </div>
+
+            </article>
+
+            <article class="margin_clasi">
+                <h3>3. Propiedad Display</h3>
+
+                <div class="margin_clasic padding_clasic">
+                    <h4>Block</h4>
+                    <div class="padding_clasic">
+                        <p>Al pasar de un elemento de linea a uno de bloque lo nuevo que puedo hacer es
+                            que ahora se apilan verticalmente y respetan la medida que he ingresado(100px x 40px)</p>
+                        <div class="Entrada2 padding_Box">
+                            <a href="Actividad1.html" class="Box2">Box-Model</a>
+                            <a href="Actividad1.html" class="Box2">Box-Model</a>
+                        </div>
+                        <div class="Entrada2 padding_Box">
+                            <a href="Actividad1.html" class="Box2 Block">Box-Model</a>
+                            <a href="Actividad1.html" class="Box2 Block">Box-Model</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="margin_clasic padding_clasic">
+                    <h4>Inline</h4>
+                    <div class="padding_clasic">
+                        <p>Al pasar de un elemento de block a uno de inline lo nuevo que puedo hacer es
+                            que ahora se apilan horizontalmente y no respetan la medida que he ingresado(100px x 40px)
+                        </p>
+                        <div class="Entrada2 padding_Box">
+                            <div class="Box">Box-Model</div>
+                            <div class="Box">Box-Model</div>
+                        </div>
+                        <div class="Entrada2 padding_Box">
+                            <div class="Box Inline">Box-Model</div>
+                            <div class="Box Inline">Box-Model</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="margin_clasic padding_clasic">
+                    <h4>Inline-Block</h4>
+                    <div class="padding_clasic">
+                        <p>Al pasar de un elemento de block o inline a uno de inline-block lo nuevo que puedo hacer es
+                            que ahora se apilan horizontalmente y respetan la medida que he ingresado(100px x 40px)</p>
+                        <div class="Entrada2 padding_Box">
+                            <div class="Box">Box-Model</div>
+                            <div class="Box">Box-Model</div>
+                        </div>
+                        <div class="Entrada2 padding_Box">
+                            <div class="Box Inline-Block">Box-Model</div>
+                            <div class="Box Inline-Block">Box-Model</div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+        </main>
+
+        <aside class="margin_clasic padding_clasic">
+            <h2>Informacion Extra</h2>
+
+            <div class="Entrada3 margin_clasic padding_clasic">
+                <h3>🌞🌞 ¿Qué es HTML? 🦊 Aprende HTML 🚀 RÁPIDO y FÁCIL 💚</h3>
+                <video>
+                    <source src="Qué es HTML .mp4" alt="¿Qué es HTML?" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="Entrada3 margin_clasic padding_clasic">
+                <h3>Musica para Programar</h3>
+                <audio controls>
+                    <source src="Musica para Programar.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+        </aside>
+
+    </div>
+
+    <footer>
+        <div class="Titulo">
+            <h1>Ejemplo de Box-Model</h1>
+        </div>
+        <nav>
+            <a href="Actividad2.html" class="enlace">Ejemplo de BOM Y DOM</a>
+        </nav>
+    </footer>
+
+</body>
+
+</html>

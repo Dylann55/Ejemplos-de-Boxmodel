@@ -1,0 +1,285 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+:root {
+    --Fuente1: 'Bangers', cursive;
+    --Fuente2: 'Knewave', cursive;
+    --Fuente3: 'Oswald', sans-serif;
+}
+
+h1 {
+    font-family: var(--Fuente1);
+}
+
+h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+h5 {
+    font-size: 15px;
+}
+
+h2,
+h3,
+h4,
+h5 {
+    font-family: var(--Fuente3);
+}
+
+h3,
+h4,
+h5 {
+    margin-bottom: 6px;
+}
+
+p {
+    font-family: var(--Fuente3);
+    margin-bottom: 8px;
+}
+
+body {
+    background-color: cornflowerblue
+}
+
+header {
+    background-color: rgb(28, 35, 116);
+}
+
+nav {
+    font-family: var(--Fuente3);
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+article {
+    margin-bottom: 8px;
+}
+
+footer {
+    background-color: rgb(28, 35, 116);
+    font-family: var(--Fuente1);
+    margin-top: 8px;
+    padding: 15px;
+}
+
+.padding_clasic {
+    padding: 8px;
+}
+
+.padding_Box {
+    padding: 8px;
+}
+
+.Contenedor {
+    margin-top: 8px;
+}
+
+.Titulo {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.Entrada2 {
+    background-color: white;
+    margin-top: 4px;
+    margin-bottom: 8px;
+    border: 2px groove black;
+}
+
+.Entrada2:last-of-type {
+    margin-bottom: 0px;
+}
+
+.Entrada3 {
+    margin-bottom: 5px;
+}
+
+.Entrada3:last-of-type {
+    margin-bottom: 0px;
+}
+
+.Box {
+    background-color: royalblue;
+    font-family: var(--Fuente2);
+    color: white;
+
+    /*Propiedad para redondear vertices*/
+    border-radius: 3px;
+
+    width: 100px;
+    height: 40px;
+}
+
+.Box2 {
+    background-color: royalblue;
+    font-family: var(--Fuente2);
+    color: white;
+    /*Propiedad para redondear vertices*/
+    border-radius: 3px;
+
+    /* Valores puestos para la propiedad display: block*/
+    width: 100px;
+    height: 40px;
+}
+
+.Valor1 {
+    margin: 15px;
+    padding: 15px;
+}
+
+.Valor2 {
+    margin: 15px 0px;
+    padding: 15px 0px;
+}
+
+.Valor3 {
+    margin: 15px 0px 10px;
+    padding: 15px 0px 10px;
+}
+
+.Valor4 {
+    margin: 15px 10px 5px 0px;
+    padding: 15px 10px 5px 0px;
+}
+
+.Border {
+    border-top-width: 4px;
+    border-bottom-width: 5px;
+    border-right-width: 3px;
+    border-left-width: 6px;
+
+    border-top-style: dashed;
+    border-bottom-style: double;
+    border-right-style: solid;
+    border-left-style: groove;
+
+    border-top-color: black;
+    border-bottom-color: brown;
+    border-right-color: blueviolet;
+    border-left-color: darkorange;
+}
+
+/* 
+   Content Box : Tenemos que las dimensiones de la caja son 100x40 entonces al usar Content-Box el contenido va a tener estas dimensiones aparte de los 5px del padding y del borde
+   Border Box : Al usar Border-Box las dimensiones del contenido van a cambiar , pasaran a ser 80x20 para asi completar los 100x40 con los 5px del padding y del borde 
+   Y nos ayuda a controlar el cálculo que hace el navegador a la hora de modificar las propiedades content, padding y border.
+   */
+.Content-Box {
+    box-sizing: content-box;
+    padding: 5px;
+    border: 5px ridge aquamarine;
+}
+
+.Border-Box {
+    box-sizing: border-box;
+    padding: 5px;
+    border: 5px ridge aquamarine;
+}
+
+/*Al pasar de un elemento de linea a uno de bloque lo nuevo que puedo hacer es 
+  que ahora se apilan verticalmente y respetan la medida que he ingresado(100px x 30px)*/
+.Block {
+    display: block;
+}
+
+/*Al pasar de un elemento de block a uno de inline lo nuevo que puedo hacer es 
+   que ahora se apilan horizontalmente y no respetan la medida que he ingresado(100px x 30px)*/
+.Inline {
+    display: inline;
+}
+
+/*Al pasar de un elemento de block o inline a uno de inline-block lo nuevo que puedo hacer es 
+  que ahora se apilan horizontalmente y respetan la medida que he ingresado(100px x 30px)*/
+.Inline-Block {
+    display: inline-block;
+}
+
+@media (max-width: 480px) {
+
+    header,
+    footer {
+        text-align: center;
+        background-color: rgb(44, 57, 190);
+    }
+
+    .Titulo {
+        font-size: 17px;
+    }
+
+    aside {
+        margin-top: 8px;
+    }
+
+    video {
+        width: 250px;
+        height: 132px;
+    }
+
+    audio {
+        width: 250px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+
+    header,
+    footer {
+        text-align: start;
+        background-color: rgb(28, 35, 116);
+    }
+
+    .Titulo {
+        font-size: 23px;
+    }
+
+    aside {
+        margin-top: 4px;
+    }
+
+    video {
+        width: 400px;
+        height: 211px;
+    }
+
+    audio {
+        width: 400px;
+    }
+}
+
+@media (min-width: 1025px) {
+
+    header,
+    footer {
+        text-align: start;
+        background-color: rgb(34, 12, 101);
+    }
+
+    .Titulo {
+        font-size: 27px;
+    }
+
+    aside {
+        margin-top: 0px;
+    }
+
+    /* La clase .Propiedad ocupara la propiedad display:grid para asignar 2 columnas en la
+       cual 2/3 del espacio lo ocupara <main> y lo que queda lo ocupara el <aside>*/
+    .Propiedad {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 15px
+    }
+
+    video {
+        width: 300px;
+        height: 158px;
+    }
+
+    audio {
+        width: 300px;
+    }
+}
